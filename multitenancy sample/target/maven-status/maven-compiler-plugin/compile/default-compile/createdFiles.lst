@@ -1,0 +1,7 @@
+com\czetsuyatech\config\MultitenantKeycloakAuthenticationEntryPoint.class
+com\czetsuyatech\config\PathBasedConfigResolver.class
+com\czetsuyatech\config\SpringKeycloakSecurityConfiguration.class
+com\czetsuyatech\controller\CatalogController.class
+com\czetsuyatech\config\SpringKeycloakSecurityConfiguration$SpringKeycloakSecurityAdapter.class
+com\czetsuyatech\SpringKeycloakMultiTenantApplication.class
+com\czetsuyatech\config\SpringKeycloakSecurityConfiguration$KeycloakConfigurationAdapter.class
