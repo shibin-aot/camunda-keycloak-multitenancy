@@ -37,8 +37,8 @@ keycloak:
   url.plugin: ${KEYCLOAK_URL_PLUGIN:https://localhost:9001}
 
   # Keycloak Camunda Identity Client
-  client.id: ${KEYCLOAK_CLIENT_ID:camunda-identity-service}
-  client.secret: ${KEYCLOAK_CLIENT_SECRET:cbee1434-7e4d-4d85-bab6-5944b427a3c0}
+  client.id: ${KEYCLOAK_CLIENT_ID:forms-flow-bpm}
+  client.secret: ${KEYCLOAK_CLIENT_SECRET:815f0ecc-9309-4400-a1a6-46c4bb4f274e}
 
 # Spring Boot Security OAuth2 SSO
 spring.security:
@@ -54,11 +54,11 @@ spring.security:
           scope: openid, profile, email
       provider:
         keycloak:
-          issuer-uri: ${keycloak.url.auth}/auth/realms/camunda
-          authorization-uri: ${keycloak.url.auth}/auth/realms/camunda/protocol/openid-connect/auth
-          user-info-uri: ${keycloak.url.auth}/auth/realms/camunda/protocol/openid-connect/userinfo
-          token-uri: ${keycloak.url.token}/auth/realms/camunda/protocol/openid-connect/token
-          jwk-set-uri: ${keycloak.url.token}/auth/realms/camunda/protocol/openid-connect/certs
+          issuer-uri: ${keycloak.url.auth}/auth/realms/sample
+          authorization-uri: ${keycloak.url.auth}/auth/realms/sample/protocol/openid-connect/auth
+          user-info-uri: ${keycloak.url.auth}/auth/realms/sample/protocol/openid-connect/userinfo
+          token-uri: ${keycloak.url.token}/auth/realms/sample/protocol/openid-connect/token
+          jwk-set-uri: ${keycloak.url.token}/auth/realms/sample/protocol/openid-connect/certs
           # set user-name-attribute one of: 
           # - sub                -> default; using keycloak ID as camunda user ID
           # - email              -> useEmailAsCamundaUserId=true
@@ -75,8 +75,8 @@ rest.security:
 
 # Camunda Keycloak Identity Provider Plugin
 plugin.identity.keycloak:
-  keycloakIssuerUrl: ${keycloak.url.plugin}/auth/realms/camunda
-  keycloakAdminUrl: ${keycloak.url.plugin}/auth/admin/realms/camunda
+  keycloakIssuerUrl: ${keycloak.url.plugin}/auth/realms/sample
+  keycloakAdminUrl: ${keycloak.url.plugin}/auth/admin/realms/sample
   clientId: ${keycloak.client.id}
   clientSecret: ${keycloak.client.secret}
   useEmailAsCamundaUserId: false

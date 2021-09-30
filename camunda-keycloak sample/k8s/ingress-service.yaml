@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: keycloak-showcase-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-path: "/"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/session-cookie-samesite: "none"
+    nginx.ingress.kubernetes.io/session-cookie-conditional-samesite-none: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1$2
+
+spec:
+  rules:
+  - host: armstrong02
+    http:
+      paths:
+        - path: /(camunda)(.*)(/|$)
+          pathType: Prefix
+          backend:
+            service:
+              name: keycloak-showcase-service
+              port:
+                number: 8080
+        - path: /(auth)(.*)(/|$)
+          pathType: Prefix
+          backend:
+            service:
+              name: keycloak-server-service
+              port:
+                number: 8080
+            
