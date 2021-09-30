@@ -3,7 +3,9 @@
 	"auth-server-url": "http://localhost:8080/auth/",
 	"ssl-required": "external",
 	"resource": "forms-flow-bpm",
-	"public-client": false,
-	"client-secret": "6875e625-ef04-4b81-9d62-feaa207be64c",
-	"confidential-port": 0
+	"confidential-port": 0,
+	"verify-token-audience" : true,
+	"credentials" : {
+		"secret" : "6875e625-ef04-4b81-9d62-feaa207be64c"
+	}
 }

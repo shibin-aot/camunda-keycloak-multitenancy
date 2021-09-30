@@ -9,6 +9,7 @@ import org.keycloak.representations.AccessToken;
 import org.keycloak.representations.IDToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,18 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CatalogController {
 
-    @GetMapping("/tenant/tenant1/catalog")
-    public String listCatalogBranch1() {
-        return getUserInfo();
-    }
-
-    @GetMapping("/tenant/tenant2/catalog")
-    public String listCatalogBranch2() {
-        return getUserInfo();
-    }
-
-    @GetMapping("/tenant/tenant3/catalog")
-    public String listCatalogBranch3() {
+    @GetMapping("/tenant/{tenant}/catalog")
+    public String listCatalogBranch1(@PathVariable("tenant") String tenant) {
         return getUserInfo();
     }
 
