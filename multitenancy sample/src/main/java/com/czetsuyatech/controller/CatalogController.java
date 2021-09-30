@@ -17,13 +17,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CatalogController {
 
-    @GetMapping("/tenant/branch1/catalog")
+    @GetMapping("/tenant/tenant1/catalog")
     public String listCatalogBranch1() {
         return getUserInfo();
     }
 
-    @GetMapping("/tenant/branch2/catalog")
+    @GetMapping("/tenant/tenant2/catalog")
     public String listCatalogBranch2() {
+        return getUserInfo();
+    }
+
+    @GetMapping("/tenant/tenant3/catalog")
+    public String listCatalogBranch3() {
         return getUserInfo();
     }
 

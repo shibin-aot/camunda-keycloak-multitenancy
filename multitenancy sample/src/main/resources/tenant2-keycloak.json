@@ -1,0 +1,9 @@
+{
+	"realm": "tenant2",
+	"auth-server-url": "http://localhost:8080/auth/",
+	"ssl-required": "external",
+	"resource": "forms-flow-bpm",
+	"public-client": false,
+	"client-secret": "53755204-5c65-4c85-a54a-abc8a09295f0",
+	"confidential-port": 0
+}

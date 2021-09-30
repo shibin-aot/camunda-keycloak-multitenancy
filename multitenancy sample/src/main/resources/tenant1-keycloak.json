@@ -1,0 +1,11 @@
+{
+	"realm": "tenant1",
+	"auth-server-url": "http://localhost:8080/auth/",
+	"ssl-required": "external",
+	"resource": "forms-flow-bpm",
+	"confidential-port": 0,
+	"verify-token-audience" : true,
+	"credentials" : {
+		"secret" : "47180a50-8ea7-42bd-b2e2-c6195224b7f3"
+	}
+}
